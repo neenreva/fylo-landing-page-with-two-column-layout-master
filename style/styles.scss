@@ -1,2 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+$-clr-p--VeryDarkBlue: hsl(243, 87%, 12%);
+$-clr-p--DesaturatedBlue: hsl(238, 22%, 44%);
+$-clr-a--BrightBlue: hsl(224, 93%, 58%);
+$-clr-a--ModerateCyan: hsl(170, 45%, 43%);
+$-clr-n--LightGrayishBlue: hsl(240, 75%, 98%);
+$-clr-n--LightGray: hsl(0, 0%, 75%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+nav,
+button,
+input {
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  background-color: $-clr-a--BrightBlue;
+  color: $-clr-n--LightGrayishBlue;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  &:hover {
+    background-color: hsl(224, 93%, 68%);
+  }
+}
+
+input {
+  padding: 0.75rem 1.25rem;
+  color: $-clr-p--VeryDarkBlue;
+  border: 1px solid $-clr-p--VeryDarkBlue;
+  border-radius: 0.25rem;
+  &::placeholder {
+    color: $-clr-n--LightGray;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.validation-error {
+  opacity: 1;
+  color: red;
+  margin-top: -0.9rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  padding: 1.5rem 1.5rem 5.5rem 1.5rem;
+  &__logo {
+    height: 1.5rem;
+  }
+  &__links {
+    width: clamp(130px, 51%, 200px);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.hero {
+  background-image: url(../images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-bottom: 4.35rem;
+  &__img {
+    width: 81vw;
+  }
+  &__info {
+    padding: 2.5rem 1.75rem;
+    text-align: center;
+    &-header {
+      font-size: 1.58rem;
+      font-weight: 700;
+      line-height: 1.42;
+      padding-bottom: 1.5rem;
+    }
+    &-copy {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      letter-spacing: 0.3px;
+      padding-bottom: 1.75rem;
+    }
+    &-form {
+      display: flex;
+      flex-direction: column;
+    }
+    &-form > * {
+      margin: 0 0.5rem 1rem 0.5rem;
+    }
+  }
+}
+
+.access {
+  background-color: $-clr-n--LightGrayishBlue;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  &__img {
+    width: 81vw;
+    padding: 1.35rem 0 3rem 0;
+  }
+  &__info {
+    padding: 2.5rem 1.29rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-header {
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.42;
+      padding-bottom: 1.5rem;
+    }
+    &-copy {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      letter-spacing: 0.15px;
+      text-align: left;
+      padding-bottom: 1.75rem;
+    }
+    &-link {
+      color: $-clr-a--ModerateCyan;
+      border-bottom: 1px solid $-clr-a--ModerateCyan;
+      font-size: 0.75rem;
+      width: fit-content;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      span {
+        padding-left: 5px;
+      }
+      margin-bottom: 2.5rem;
+    }
+    &-quote {
+      background-color: white;
+      border-radius: 3px;
+      padding: 1.25rem 1.15rem 1rem 1.65rem;
+      font-size: 0.67rem;
+      text-align: left;
+      width: 85%;
+      &-copy {
+        line-height: 1.75;
+      }
+      &-user {
+        display: flex;
+        align-items: center;
+        &-avatar {
+          height: 25px;
+          border-radius: 50%;
+        }
+        &-info {
+          padding-left: 0.45rem;
+        }
+        &-name {
+          font-size: 0.65rem;
+          // font-weight: 700;
+        }
+        &-title {
+          font-size: 0.40625rem;
+        }
+      }
+    }
+  }
+}
+
+.sign-up {
+  background-color: $-clr-p--DesaturatedBlue;
+  color: $-clr-n--LightGrayishBlue;
+}
+
+.footer {
+  background-color: $-clr-p--VeryDarkBlue;
+  color: $-clr-n--LightGrayishBlue;
+
+  &-logo {
+    filter: invert(92%) sepia(22%) saturate(284%) hue-rotate(192deg)
+      brightness(103%) contrast(99%); //fix me
+  }
+}
+
+@media (min-width: 800px) {
+  .hero {
+    flex-direction: row;
+    background-image: url(../images/bg-curve-desktop.svg);
+  }
+
+  .access {
+    flex-direction: row;
+  }
+
+  .sign-up {
+  }
 }

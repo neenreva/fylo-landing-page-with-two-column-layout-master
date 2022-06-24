@@ -1,1 +1,212 @@
-/*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+nav,
+button,
+input {
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  background-color: hsl(224deg, 93%, 58%);
+  color: hsl(240deg, 75%, 98%);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+}
+button:hover {
+  background-color: hsl(224deg, 93%, 68%);
+}
+
+input {
+  padding: 0.75rem 1.25rem;
+  color: hsl(243deg, 87%, 12%);
+  border: 1px solid hsl(243deg, 87%, 12%);
+  border-radius: 0.25rem;
+}
+input::-moz-placeholder {
+  color: hsl(0deg, 0%, 75%);
+}
+input:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 75%);
+}
+input::placeholder {
+  color: hsl(0deg, 0%, 75%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.validation-error {
+  opacity: 1;
+  color: red;
+  margin-top: -0.9rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  padding: 1.5rem 1.5rem 5.5rem 1.5rem;
+}
+.nav__logo {
+  height: 1.5rem;
+}
+.nav__links {
+  width: clamp(130px, 51%, 200px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  background-image: url(../images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-bottom: 4.35rem;
+}
+.hero__img {
+  width: 81vw;
+}
+.hero__info {
+  padding: 2.5rem 1.75rem;
+  text-align: center;
+}
+.hero__info-header {
+  font-size: 1.58rem;
+  font-weight: 700;
+  line-height: 1.42;
+  padding-bottom: 1.5rem;
+}
+.hero__info-copy {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  letter-spacing: 0.3px;
+  padding-bottom: 1.75rem;
+}
+.hero__info-form {
+  display: flex;
+  flex-direction: column;
+}
+.hero__info-form > * {
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.access {
+  background-color: hsl(240deg, 75%, 98%);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.access__img {
+  width: 81vw;
+  padding: 1.35rem 0 3rem 0;
+}
+.access__info {
+  padding: 2.5rem 1.29rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.access__info-header {
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.42;
+  padding-bottom: 1.5rem;
+}
+.access__info-copy {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  letter-spacing: 0.15px;
+  text-align: left;
+  padding-bottom: 1.75rem;
+}
+.access__info-link {
+  color: hsl(170deg, 45%, 43%);
+  border-bottom: 1px solid hsl(170deg, 45%, 43%);
+  font-size: 0.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.access__info-link span {
+  padding-left: 5px;
+}
+.access__info-quote {
+  background-color: white;
+  border-radius: 3px;
+  padding: 1.25rem 1.15rem 1rem 1.65rem;
+  font-size: 0.67rem;
+  text-align: left;
+  width: 85%;
+}
+.access__info-quote-copy {
+  line-height: 1.75;
+}
+.access__info-quote-user {
+  display: flex;
+  align-items: center;
+}
+.access__info-quote-user-avatar {
+  height: 25px;
+  border-radius: 50%;
+}
+.access__info-quote-user-info {
+  padding-left: 0.45rem;
+}
+.access__info-quote-user-name {
+  font-size: 0.65rem;
+}
+.access__info-quote-user-title {
+  font-size: 0.40625rem;
+}
+
+.sign-up {
+  background-color: hsl(238deg, 22%, 44%);
+  color: hsl(240deg, 75%, 98%);
+}
+
+.footer {
+  background-color: hsl(243deg, 87%, 12%);
+  color: hsl(240deg, 75%, 98%);
+}
+.footer-logo {
+  filter: invert(92%) sepia(22%) saturate(284%) hue-rotate(192deg) brightness(103%) contrast(99%);
+}
+
+@media (min-width: 800px) {
+  .hero {
+    flex-direction: row;
+    background-image: url(../images/bg-curve-desktop.svg);
+  }
+
+  .access {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=styles.css.map */
