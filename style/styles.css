@@ -27,10 +27,11 @@ button {
 }
 button:hover {
   background-color: hsl(224deg, 93%, 68%);
+  cursor: pointer;
 }
 
 input {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75em 1.25em;
   color: hsl(243deg, 87%, 12%);
   border: 1px solid hsl(243deg, 87%, 12%);
   border-radius: 0.25rem;
@@ -52,8 +53,8 @@ a {
 
 .validation-error {
   opacity: 1;
-  color: red;
-  margin-top: -0.9rem;
+  color: inherit;
+  text-align: left;
 }
 
 .hidden {
@@ -65,10 +66,11 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 0.75rem;
-  padding: 1.5rem 1.5rem 5.5rem 1.5rem;
+  padding-block: 1.5rem 5.5rem;
+  padding-inline: 1.5rem;
 }
 .nav__logo {
-  height: 1.5rem;
+  width: clamp(50px, 20vw, 100px);
 }
 .nav__links {
   width: clamp(130px, 51%, 200px);
@@ -84,32 +86,36 @@ a {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  padding-bottom: 4.35rem;
+  padding-block: 0 4.35rem;
 }
 .hero__img {
   width: 81vw;
 }
 .hero__info {
-  padding: 2.5rem 1.75rem;
+  padding-block: 2.25rem 2.5rem;
+  padding-inline: 7.8vw;
   text-align: center;
 }
 .hero__info-header {
-  font-size: 1.58rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.42;
-  padding-bottom: 1.5rem;
+  padding-block: 0 1.5rem;
 }
 .hero__info-copy {
   font-size: 0.85rem;
-  line-height: 1.55;
-  letter-spacing: 0.3px;
-  padding-bottom: 1.75rem;
+  line-height: 1.45;
+  padding-block: 0 1.75rem;
 }
 .hero__info-form {
   display: flex;
   flex-direction: column;
 }
-.hero__info-form > * {
+.hero__info-form-inpt-btn {
+  display: flex;
+  flex-direction: column;
+}
+.hero__info-form-inpt-btn > * {
   margin: 0 0.5rem 1rem 0.5rem;
 }
 
@@ -124,7 +130,8 @@ a {
   padding: 1.35rem 0 3rem 0;
 }
 .access__info {
-  padding: 2.5rem 1.29rem;
+  padding-block: 2.5rem 5rem;
+  padding-inline: 5vw;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -134,28 +141,28 @@ a {
   font-size: 1.02rem;
   font-weight: 700;
   line-height: 1.42;
-  padding-bottom: 1.5rem;
+  padding-block: 0 1.5rem;
 }
 .access__info-copy {
   font-size: 0.85rem;
-  line-height: 1.55;
-  letter-spacing: 0.15px;
+  line-height: 1.52;
   text-align: left;
-  padding-bottom: 1.75rem;
+  padding-block: 0 0.75rem;
 }
 .access__info-link {
-  color: hsl(170deg, 45%, 43%);
-  border-bottom: 1px solid hsl(170deg, 45%, 43%);
-  font-size: 0.75rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 25px;
   display: flex;
   align-items: center;
-  margin-bottom: 2.5rem;
+  margin-block: 1.125rem 2.5rem;
+  font-size: 0.75rem;
+  color: hsl(170deg, 45%, 43%);
+  border-bottom: 1px solid hsl(170deg, 45%, 43%);
+  height: 25px;
 }
-.access__info-link span {
+.access__info-link:hover {
+  color: hsl(170deg, 45%, 63%);
+  border-bottom: 1px solid hsl(170deg, 45%, 63%);
+}
+.access__info-link img {
   padding-left: 5px;
 }
 .access__info-quote {
@@ -165,9 +172,11 @@ a {
   font-size: 0.67rem;
   text-align: left;
   width: 85%;
+  box-shadow: 10px 10px solid hsl(243deg, 87%, 12%);
 }
 .access__info-quote-copy {
   line-height: 1.75;
+  padding-bottom: 0.5rem;
 }
 .access__info-quote-user {
   display: flex;
@@ -190,23 +199,260 @@ a {
 .sign-up {
   background-color: hsl(238deg, 22%, 44%);
   color: hsl(240deg, 75%, 98%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block: 2.25rem 2.75rem;
+  padding-inline: 2.5rem;
+}
+.sign-up__info {
+  text-align: center;
+}
+.sign-up__info-header {
+  font-size: 1.1rem;
+  padding-block: 0.5rem;
+}
+.sign-up__info-copy {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  padding-block: 0.5rem 1rem;
+}
+.sign-up__form {
+  margin: 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.sign-up__form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sign-up__form-inpt-btn {
+  display: flex;
+  flex-direction: column;
+}
+.sign-up__form-inpt {
+  margin-block: 0rem 0.51rem;
+}
+.sign-up__form-btn {
+  margin-block: 0.51rem;
 }
 
 .footer {
+  width: 100%;
+  padding-block: 3.5rem 0rem;
+  padding-inline: 2.5rem;
   background-color: hsl(243deg, 87%, 12%);
   color: hsl(240deg, 75%, 98%);
 }
 .footer-logo {
   filter: invert(92%) sepia(22%) saturate(284%) hue-rotate(192deg) brightness(103%) contrast(99%);
 }
+.footer-info > * {
+  padding-block: 1rem;
+}
+.footer-contact > * {
+  display: flex;
+  padding-block: 0.5rem;
+}
+.footer-contact > *:hover {
+  color: hsl(238deg, 22%, 44%);
+}
+.footer-contact-icon {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-inline: 0 1.5vw;
+}
+.footer-links > * {
+  padding-block: 0.75rem;
+}
+.footer-links ul > * {
+  padding-block: 0.5rem;
+  list-style: none;
+}
+.footer-links ul > *:hover {
+  color: hsl(238deg, 22%, 44%);
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+}
+.footer-social .fa-brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+}
+.footer-social .fa-brands:hover {
+  cursor: pointer;
+  color: hsl(224deg, 93%, 58%);
+  border: 1px solid hsl(224deg, 93%, 58%);
+}
+.footer-social > * {
+  border: 1px solid white;
+  padding: 0.35rem;
+  border-radius: 50%;
+  margin-inline: 5px;
+}
+.footer-attribution {
+  font-size: 0.65rem;
+  text-align: center;
+  padding-block: 1rem 0.25rem;
+}
+.footer-attribution a:hover {
+  color: hsl(170deg, 45%, 43%);
+}
 
 @media (min-width: 800px) {
+  .nav {
+    font-size: 1rem;
+    padding-block: 4rem;
+    padding-inline: 5.65%;
+  }
+  .nav__logo {
+    width: clamp(150px, 11.25vw, 200px);
+  }
+  .nav__links {
+    width: clamp(200px, 21.25%, 300px);
+  }
+
   .hero {
-    flex-direction: row;
     background-image: url(../images/bg-curve-desktop.svg);
+    flex-direction: row;
+    align-items: flex-start;
+    padding-inline: 5.6%;
+    padding-block: 1.5rem 10.75rem;
+  }
+  .hero__img {
+    width: 46vw;
+    padding-inline: 2rem 0;
+  }
+  .hero__info {
+    text-align: left;
+    padding-block: 4.25rem;
+    padding-inline: 0;
+  }
+  .hero__info-header {
+    font-size: clamp(1.28rem, 2.77vw, 3rem);
+    line-height: 1.5;
+    padding-block: 0.5rem;
+  }
+  .hero__info-copy {
+    font-size: 1.09rem;
+    line-height: 1.35;
+    letter-spacing: 0.3px;
+    padding-block: 0.5rem 1.65rem;
+    padding-inline: 0rem 2rem;
+  }
+  .hero__info-form-inpt-btn {
+    flex-direction: row;
+    height: 3.75rem;
+  }
+  .hero__info-form-input {
+    width: 52.5%;
+    margin: 0 0.5rem 1rem 0;
+  }
+  .hero__info-form-btn {
+    width: 33%;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
   }
 
   .access {
     flex-direction: row;
+    align-items: flex-start;
+    padding-inline: 5.6%;
+    padding-block: 10.75rem 1.2rem;
+    text-align: left;
+  }
+  .access__img {
+    width: 37vw;
+  }
+  .access__info {
+    padding-block: 0rem 5.75rem;
+    padding-inline: 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  .access__info-header {
+    font-size: clamp(1.28rem, 2.77vw, 3rem);
+    padding-block: 0rem 1rem;
+    margin-block: -0.51rem 0;
+  }
+  .access__info-copy {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    padding-block: 1rem 0.25rem;
+    padding-inline: 0rem 15vw;
+  }
+  .access__info-link {
+    margin-block: 0.75rem 2.75rem;
+    font-size: 1rem;
+  }
+  .access__info-quote {
+    padding: 1.5rem 1.55rem 2rem 2rem;
+    font-size: 0.87rem;
+    width: clamp(20rem, 48%, 40rem);
+  }
+  .access__info-quote-user-avatar {
+    height: 2.2vw;
+  }
+  .access__info-quote-user-name {
+    font-size: 0.8rem;
+  }
+  .access__info-quote-user-title {
+    font-size: 0.55rem;
+  }
+
+  .sign-up {
+    flex-direction: row;
+    padding-inline: 5.6%;
+    padding-block: 6rem 3.85rem;
+  }
+  .sign-up__info {
+    text-align: left;
+    width: 50vw;
+  }
+  .sign-up__info-header {
+    font-size: clamp(1.28rem, 2.2vw, 3rem);
+    padding-block: 0.5rem 0.75rem;
+  }
+  .sign-up__info-copy {
+    font-size: 1.065rem;
+    line-height: 1.5;
+    padding-inline: 0 13vw;
+  }
+  .sign-up__form {
+    width: 34vw;
+    margin: 1.25rem 2rem;
+  }
+
+  .footer {
+    padding-inline: 5.6%;
+    padding-block: 6.7rem 0rem;
+  }
+  .footer-logo {
+    width: clamp(150px, 12vw, 200px);
+  }
+  .footer-info {
+    width: 75.5vw;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 0;
+  }
+  .footer-contact {
+    padding-block: 0.75rem;
+    padding-inline: 0 2.5vw;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 31.75%;
+    padding-inline: 0rem 0;
+    padding-block: 0;
   }
 }/*# sourceMappingURL=styles.css.map */
