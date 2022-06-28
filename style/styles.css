@@ -399,7 +399,7 @@ a {
     width: clamp(20rem, 48%, 40rem);
   }
   .access__info-quote-user-avatar {
-    height: 2.2vw;
+    height: clamp(30px, 2.2vw, 40px);
   }
   .access__info-quote-user-name {
     font-size: 0.8rem;

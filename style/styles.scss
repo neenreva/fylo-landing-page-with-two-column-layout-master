@@ -407,7 +407,7 @@ a {
         width: clamp(20rem, 48%, 40rem);
         &-user {
           &-avatar {
-            height: 2.2vw;
+            height: clamp(30px, 2.2vw, 40px);
           }
           &-name {
             font-size: 0.8rem;
