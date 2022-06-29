@@ -22,13 +22,13 @@
     <script defer src="app.js"></script>
   </head>
   <body>
-    <nav class="nav">
-      <img class="nav__logo" src="./images/logo.svg" alt="Fylo Logo" />
+    <nav class="nav" role="navigation" aria-label="Main">
+      <a href="./index.html" aria-label="Home"><img class="nav__logo" src="./images/logo.svg" alt="" aria-hidden="true" /></a>
 
       <div class="nav__links">
-        <a href="#">Features</a>
-        <a href="#">Team</a>
-        <a href="#">Sign In</a>
+        <a href="#" aria-label="Features Link">Features</a>
+        <a href="#" aria-label="Team Link">Team</a>
+        <a href="#" aria-label="Sign In Link">Sign In</a>
       </div>
     </nav>
 
@@ -43,14 +43,16 @@
             them wherever you need, share and collaborate with friends, family,
             and co-workers.
           </p>
-          <form class="hero__info-form" action="submit">
+          <form class="hero__info-form" action="">
             <div class="hero__info-form-inpt-btn">
+              <label for="email" class="sr-only">Email</label>
               <input
+                id="email"
                 class="hero__info-form-input"
                 placeholder="Enter your email..."
                 type="text"
               />
-              <button class="hero__info-form-btn">Get Started</button>
+              <button class="hero__info-form-btn" type="submit">Get Started</button>
             </div>
             <p class="validation-error hidden">Please check your email</p>
           </form>
@@ -58,7 +60,7 @@
         <img
           class="hero__img"
           src="./images/illustration-1.svg"
-          alt="Supporting Illustration"
+          alt="" aria-hidden="true"
         />
       </section>
       <section class="access">
@@ -74,10 +76,10 @@
           </p>
           <a class="access__info-link" href="#"
             >See how Fylo works
-            <img src="./images/icon-arrow.svg" alt=""/>
+            <img src="./images/icon-arrow.svg" alt="" aria-hidden="true"/>
           </a>
           <blockquote class="access__info-quote">
-            <img src="./images/icon-quotes.svg" alt="Quotes" />
+            <img src="./images/icon-quotes.svg" alt="" aria-hidden="true" />
             <p class="access__info-quote-copy">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled
@@ -87,7 +89,7 @@
               <img
                 class="access__info-quote-user-avatar"
                 src="./images/avatar-testimonial.jpg"
-                alt="User avatar"
+                alt="Kyle Burton"
               />
               <div class="access__info-quote-user-info">
                 <h2 class="access__info-quote-user-name">Kyle Burton</h2>
@@ -101,7 +103,7 @@
         <img
           class="access__img"
           src="./images/illustration-2.svg"
-          alt="Supporting Illustration"
+          alt="" aria-hidden="true"
         />
       </section>
       <section class="sign-up">
@@ -126,45 +128,45 @@
     </main>
 
     <footer class="footer">
-      <img class="footer-logo" src="./images/logo.svg" alt="Fylo Logo" />
+      <img class="footer-logo" src="./images/logo.svg" alt="" aria-hidden="true" />
 
       <div class="footer-info">
         <div class="footer-contact">
           <div class="footer-contact-phone">
-            <img class="footer-contact-icon" src="./images/icon-phone.svg" alt="Phone Icon" />
+            <img class="footer-contact-icon" src="./images/icon-phone.svg" alt="" aria-hidden="true" />
             <p>Phone: +1-543-123-4567</p>
           </div>
           <div class="footer-contact-email">
-            <img class="footer-contact-icon" src="./images/icon-email.svg" alt="Email Icon" />
+            <img class="footer-contact-icon" src="./images/icon-email.svg" alt="" aria-hidden="true" />
             <p>example@fylo.com</p>
           </div>
         </div>
-        <div class="footer-links">
+        <nav class="footer-links" role="navigation" aria-label="Footer">
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="#" aria-label="About Us Link">About Us</a></li>
+            <li><a href="#" aria-label="Jobs Link">Jobs</a></li>
+            <li><a href="#" aria-label="Press Link">Press</a></li>
+            <li><a href="#" aria-label="Blog Link">Blog</a></li>
           </ul>
           <ul>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
+            <li><a href="#" aria-label="Contact Us Link">Contact Us</a></li>
+            <li><a href="#" aria-label="Terms Link">Terms</a></li>
+            <li><a href="#" aria-label="Privacy Link">Privacy</a></li>
           </ul>
-        </div>
+        </nav>
         <div class="footer-social">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
+          <a href="#" aria-label="Facebook Link" ><i aria-hidden="true" class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter Link" ><i aria-hidden="true" class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram Link" ><i aria-hidden="true" class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
 
       <p class="footer-attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer"
           >Frontend Mentor</a
         >. Coded by
-        <a href="https://github.com/neenreva" target="_blank">neenreva</a>.
+        <a href="https://github.com/neenreva" target="_blank" rel="noreferrer">neenreva</a>.
       </p>
     </footer>
   </body>
